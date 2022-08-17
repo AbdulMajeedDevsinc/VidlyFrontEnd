@@ -1,7 +1,6 @@
 import React from "react";
 
-const ListGroup = (props) => {
-  const { items, selectedItem, textProperty, valueProperty } = props;
+const ListGroup = ({ items, selectedItem, textProperty, valueProperty }) => {
   return (
     <ul className="list-group">
       {/* <li
@@ -14,7 +13,7 @@ const ListGroup = (props) => {
       </li> */}
       {items.map((genre) => (
         <li
-          key={genre[valueProperty] ? genre[valueProperty] : 1}
+          key={genre[valueProperty]}
           className={
             genre === selectedItem
               ? "list-group-item active"
