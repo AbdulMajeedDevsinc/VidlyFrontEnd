@@ -1,6 +1,12 @@
 import React from "react";
 
-const ListGroup = ({ items, selectedItem, textProperty, valueProperty }) => {
+const ListGroup = ({
+  items,
+  selectedItem,
+  textProperty,
+  valueProperty,
+  onItemSelect,
+}) => {
   return (
     <ul className="list-group">
       {/* <li
@@ -19,7 +25,7 @@ const ListGroup = ({ items, selectedItem, textProperty, valueProperty }) => {
               ? "list-group-item active"
               : "list-group-item"
           }
-          onClick={() => props.onItemSelect(genre)}
+          onClick={() => onItemSelect(genre)}
         >
           {genre[textProperty]}
         </li>
